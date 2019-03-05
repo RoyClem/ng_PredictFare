@@ -1,0 +1,62 @@
+.body-content {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+* {
+  box-sizing: border-box
+}
+
+select {
+  height: 30px;
+}
+
+label {
+  padding: 10px;
+  display: inline-block;
+  border: none;
+  height: 30px;
+}
+
+input[type=text] {
+  width: 100px;
+  height: 30px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+  input[type=text]:focus {
+    background-color: lightgoldenrodyellow;
+  }
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+
+.btn {
+  padding: 0 5px 0 5px
+}
+
+button:hover {
+  opacity: 1;
+}
+
+
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+    width: 100%;
+  }
+}

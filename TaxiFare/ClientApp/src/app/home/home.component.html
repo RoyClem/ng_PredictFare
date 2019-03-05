@@ -1,0 +1,27 @@
+  <div class="h1" style="margin:10px;" >NY Taxi Fare Prediction</div>
+  <hr>
+  <div>
+    <label><b>Vendor Id</b></label>
+    <select id="vendorId" [(ngModel)]="vendorId">
+      <option *ngFor="let vendorId of vendorIds" [ngValue]="vendorId">{{vendorId}}</option>
+    </select>
+    <label><b>Rate Code</b></label>
+    <select id="rateCode" [(ngModel)]="rateCode">
+      <option *ngFor="let rateCode of rateCodes" [ngValue]="rateCode">{{rateCode}}</option>
+    </select>
+    <label><b>Payment Types</b></label>
+    <select id="payType" [(ngModel)]="payType">
+      <option *ngFor="let payType of payTypes" [ngValue]="payType">{{payType}}</option>
+    </select>
+    <label><b>Number Passengers</b></label>
+    <select id="numPass" [(ngModel)]="numPass">
+      <option *ngFor="let numPass of numPassengers" [ngValue]="numPass">{{numPass}}</option>
+    </select>
+    <label for="tripDis"><b>Trip Distance</b></label>
+    <input type="text" class="text-right" placeholder="in Miles" id="tripDis" [(ngModel)]="tripDis">
+    <button type="button" id="btnSubmit" class="btn btn-sm btn-primary" (click)="getPrediction($event)">Submit</button>
+  </div>
+
+<div class="clearfix"></div>
+
+<div class="h4" style="margin:10px;" *ngIf="showResult">{{result}}</div>
